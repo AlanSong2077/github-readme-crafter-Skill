@@ -1,11 +1,36 @@
 # 🎨 GitHub README Crafter
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+<p align="center">
+  <a href="https://github.com/AlanSong2077/github-readme-crafter-Skill">
     <img src="assets/banner.svg" alt="GitHub README Crafter" width="100%">
-  </picture>
-</div>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/AlanSong2077/github-readme-crafter-Skill/stargazers">
+    <img src="https://img.shields.io/github/stars/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge&logo=github&color=38bdf8" alt="Stars">
+  </a>
+  <a href="https://github.com/AlanSong2077/github-readme-crafter-Skill/forks">
+    <img src="https://img.shields.io/github/forks/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge&logo=github&color=38bdf8" alt="Forks">
+  </a>
+  <img src="https://img.shields.io/github/languages/code-size/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge&color=38bdf8" alt="Code Size">
+  <img src="https://img.shields.io/github/repo-size/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge&color=38bdf8" alt="Repo Size">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-38bdf8?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/License-MIT-38bdf8?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/actions/workflow/status/AlanSong2077/github-readme-crafter-Skill/ci.yml?style=for-the-badge&branch=main" alt="Build">
+  <img src="https://img.shields.io/badge/Standard-SDD-38bdf8?style=for-the-badge&logo=spec" alt="Spec-Driven">
+</p>
+
+<p align="center">
+  <a href="https://github.com/AlanSong2077/github-readme-crafter-Skill/releases/latest">
+    <img src="https://img.shields.io/github/v/release/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge&color=38bdf8" alt="Latest Release">
+  </a>
+  <img src="https://img.shields.io/github/release-date/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge&color=38bdf8" alt="Release Date">
+  <img src="https://img.shields.io/github/last-commit/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge&color=38bdf8" alt="Last Commit">
+</p>
 
 <div align="center">
 
@@ -13,189 +38,268 @@
 
 </div>
 
+---
+
+## ✨ What is This?
+
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/AlanSong2077/github-readme-crafter-Skill?style=for-the-badge)
-![Build](https://img.shields.io/github/actions/workflow/status/AlanSong2077/github-readme-crafter-Skill/ci.yml?style=for-the-badge)
-
+  <em>"Every README is a first impression. Make yours unforgettable."</em>
 </p>
 
-> **Transform your project documentation from invisible to irresistible.**
-> AI-powered generation with Spec-Driven Development ensures every README is a premium first impression.
+`github-readme-crafter` transforms ordinary project documentation into **premium, attention-grabbing** README documents using **Spec-Driven Development (SDD)** and **Harness Engineering**.
 
-## ✨ Features
+| Metric | Value |
+|--------|-------|
+| 📦 Scripts | 5 core generators |
+| 📋 Sections | 14 premium sections |
+| ✅ Validation | 7 test categories |
+| 🌐 Languages | EN + 中文 |
+| 🎨 Styles | 2 premium tiers |
 
-| Feature | Description |
-|---------|-------------|
-| 🎨 **Dynamic Banners** | SVG banners with gradient backgrounds and geometric decorations |
-| 📊 **Mermaid Diagrams** | Auto-generated tech stack and architecture visualizations |
-| 🌐 **Bilingual** | English and Chinese, structurally identical |
-| 🌓 **Dark/Light Mode** | Theme-aware assets that adapt automatically |
-| ⚡ **TL;DR Quick Start** | One command to immediate productivity |
-| 📈 **Star History** | Interactive project growth visualization |
-| 👥 **Contributors** | Automatic contributor showcase |
-| 📢 **Share Buttons** | Reddit, Hacker News, Twitter, LinkedIn |
+---
 
 ## 🚀 Quick Start
 
 ```bash
-# Clone the skill
-git clone https://github.com/AlanSong2077/github-readme-crafter-Skill.git
-cd github-readme-crafter-Skill
+# One-liner to glory
+git clone https://github.com/AlanSong2077/github-readme-crafter-Skill.git \
+  && cd github-readme-crafter-Skill \
+  && python3 scripts/create_readme.py /path/to/project --style professional
+```
 
-# Generate premium README
-python3 scripts/create_readme.py /path/to/project --style professional
-
-# Validate (REQUIRED)
+```bash
+# Full validation (REQUIRED before delivery)
 python3 test.py /path/to/project
 ```
 
-**Requirements**: Python 3.10+
+**Requires**: Python 3.10+
 
-## 🔧 How It Works
+---
+
+## ⚡ Features
+
+| | Feature | Description |
+|---|---------|-------------|
+| 🎨 | **Dynamic Banners** | SVG with gradient + geometric decorations, dark/light mode |
+| 📊 | **Mermaid Diagrams** | Tech stack, architecture, workflow — auto-generated |
+| 🌓 | **Theme-Aware** | Automatic dark/light mode adaptation |
+| ⚡ | **TL;DR Sections** | One-command quick start for busy readers |
+| 📈 | **Star History** | Interactive project growth visualization |
+| 🧪 | **Strong Validation** | 7 categories of HARD constraints, zero tolerance |
+| 🌐 | **Bilingual** | English + Chinese, structurally identical |
+| 🔒 | **Spec-First** | Specification-driven, no deviation allowed |
+
+---
+
+## 🔬 Architecture
 
 ```mermaid
 flowchart TB
-    classDef service fill:#e0e7ff,stroke:#4338ca,stroke-width:2px
-    classDef output fill:#d1fae5,stroke:#059669,stroke-width:2px
-    
-    subgraph Analyze["🔍 Analyze"]
-        A[Extract Metadata]
+    classDef process fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    classDef output fill:#1e293b,stroke:#22d3ee,stroke-width:2px,color:#f8fafc
+    classDef quality fill:#1e293b,stroke:#a78bfa,stroke-width:2px,color:#f8fafc
+
+    subgraph IN[📥 INPUT]
+        direction LR
+        P[/path/to/project\]
     end
-    
-    subgraph Generate["⚡ Generate"]
-        B[Create Banner]
-        C[Build Diagrams]
-        D[Add Elements]
+
+    subgraph ANALYZE[🔍 ANALYZE]
+        A[Metadata Extraction]
+        L[Language Detection]
+        S[Structure Analysis]
     end
-    
-    subgraph Validate["✅ Validate"]
-        E[Test Output]
+
+    subgraph GENERATE[⚡ GENERATE]
+        B[Banner Generator]
+        D[Mermaid Diagrams]
+        E[Advanced Elements]
     end
-    
-    subgraph Deliver["📦 Deliver"]
-        F[Premium README]
+
+    subgraph VALIDATE[🧪 VALIDATE]
+        V[test.py]
+        H[HARD Constraints]
     end
-    
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E -->|Pass| F
-    E -->|Fail| B
+
+    subgraph OUT[📤 OUTPUT]
+        R[README.md]
+        C[README.zh-CN.md]
+        A[assets/]
+    end
+
+    P --> ANALYZE
+    ANALYZE --> GENERATE
+    GENERATE --> VALIDATE
+    VALIDATE -->|PASS| OUT
+    VALIDATE -->|FAIL| GENERATE
+    OUT --> R
+    OUT --> C
+    OUT --> A
+
+    style IN fill:#1e293b,stroke:#38bdf8,color:#f8fafc
+    style ANALYZE fill:#0f172a,stroke:#38bdf8,color:#f8fafc
+    style GENERATE fill:#0f172a,stroke:#22d3ee,color:#f8fafc
+    style VALIDATE fill:#1e293b,stroke:#a78bfa,color:#f8fafc
+    style OUT fill:#0f172a,stroke:#22d3ee,color:#f8fafc
 ```
+
+---
 
 ## 📐 Tech Stack
 
 ```mermaid
-flowchart TB
-    subgraph Frontend["🎨 Frontend"]
-        Python["Python 3.10+"]
+flowchart LR
+    subgraph Core["🧠 Core"]
+        Py["Python 3.10+"]
+        SL["Standard Library"]
     end
-    
-    subgraph Backend["🔧 Backend"]
-        StdLib["Standard Library"]
-        Shields["Shields.io API"]
+
+    subgraph Services["🌐 Services"]
+        SH["Shields.io API"]
+        ST["Star-History API"]
+        CR["Contrib.rocks"]
     end
-    
-    subgraph Storage["💾 Storage"]
-        FS["File System"]
+
+    subgraph Output["📦 Output"]
+        SVG["SVG Banners"]
+        MD["Markdown README"]
+        DM["Mermaid Diagrams"]
     end
-    
-    subgraph VCS["📂 VCS"]
-        Git["Git"]
-    end
-    
-    Python --> StdLib
-    Python --> Shields
-    StdLib --> FS
-    Shields --> FS
-    Python --> Git
+
+    Py --> SL
+    Py --> SH
+    Py --> ST
+    Py --> CR
+    SH --> SVG
+    ST --> MD
+    CR --> MD
+    SL --> SVG
+    SL --> DM
 ```
 
-## 📁 Project Structure
+---
+
+## 📂 Project Structure
 
 ```
 github-readme-crafter-Skill/
-├── SPEC.md                    # Specification (source of truth)
-├── Agent.md                  # Agent operating instructions
-├── test.md                   # Validation test definitions
-├── test.py                   # Executable validator
+├── SPEC.md                    # 📜 Specification (source of truth)
+├── Agent.md                  # 🤖 Agent instructions
+├── test.md                   # 🧪 Test definitions
+├── test.py                   # ⚡ Executable validator
+│
 ├── scripts/
-│   ├── create_readme.py      # Main generator
-│   ├── analyze_project.py     # Project analyzer
-│   ├── generate_banner.py     # SVG banner generator
-│   ├── generate_mermaid.py     # Diagram generator
-│   └── generate_advanced_elements.py
+│   ├── create_readme.py      # 🚀 Main generator
+│   ├── analyze_project.py     # 🔍 Project analyzer
+│   ├── generate_banner.py     # 🎨 Banner generator
+│   ├── generate_mermaid.py    # 📊 Diagram generator
+│   └── generate_advanced_elements.py  # ✨ Badges & more
+│
 └── references/
-    ├── templates.md           # README templates
-    ├── top_projects_analysis.md
-    └── mermaid_examples.md
+    ├── templates.md           # 📋 README templates
+    ├── top_projects_analysis.md  # 🏆 Top repo analysis
+    └── mermaid_examples.md   # 📈 Diagram examples
 ```
+
+---
 
 ## 🎯 Style Tiers
 
-| Tier | Description |
-|------|-------------|
-| `standard` | All premium sections included |
-| `professional` | + Sponsors, extended architecture, security |
+| Tier | Description | Use Case |
+|------|-------------|----------|
+| `standard` | All 14 premium sections | Medium projects |
+| `professional` | Extended + sponsors, security | Large frameworks |
 
-Both tiers produce visually stunning documentation. Every README is a masterpiece.
+**Both tiers produce museum-quality documentation.**
 
-## 🛡️ Validation
+---
 
-Every output passes **7 categories of hard validation tests**:
+## 🧪 Validation Pipeline
 
-| Category | Tests | Failure |
-|----------|-------|---------|
-| A - Structural | Files, dimensions | HARD |
-| B - Content | TL;DR, sections | HARD |
-| C - Badges | Count, style, URLs | HARD |
-| D - Images | Accessibility | HARD |
-| E - Mermaid | Syntax validity | HARD |
-| F - Bilingual | Parity check | HARD |
+Every output must pass **ALL 7 categories**:
+
+| Category | Checks | Enforcement |
+|----------|--------|-------------|
+| **A** | File existence, SVG validity, dimensions | HARD FAIL |
+| **B** | TL;DR required, sections complete | HARD FAIL |
+| **C** | ≤5 badges, flat-square, no emoji | HARD FAIL |
+| **D** | URLs accessible (HTTP 200) | HARD FAIL |
+| **E** | Valid Mermaid, ≤15 nodes | HARD FAIL |
+| **F** | Bilingual parity, Chinese content | HARD FAIL |
 
 ```bash
 # Validate your README
 python3 test.py /path/to/project
+
+# Exit code 0 = PASS, Exit code 1 = FAIL
 ```
 
-## 📊 Star History
+---
+
+## 📊 Project Stats
+
+| Stat | Badge |
+|------|-------|
+| Stars | ![Stars](https://img.shields.io/github/stars/AlanSong2077/github-readme-crafter-Skill?style=flat-square) |
+| Forks | ![Forks](https://img.shields.io/github/forks/AlanSong2077/github-readme-crafter-Skill?style=flat-square) |
+| Size | ![Size](https://img.shields.io/github/repo-size/AlanSong2077/github-readme-crafter-Skill?style=flat-square) |
+
+---
+
+## 📈 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=AlanSong2077/github-readme-crafter-Skill&type=Date)](https://www.star-history.com/#AlanSong2077/github-readme-crafter-Skill&type=Date)
+
+---
 
 ## 👥 Contributors
 
 <a href="https://github.com/AlanSong2077/github-readme-crafter-Skill/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AlanSong2077/github-readme-crafter-Skill" />
+  <img src="https://contrib.rocks/image?repo=AlanSong2077/github-readme-crafter-Skill&max=5" />
 </a>
 
-## 🔗 Share
+---
 
-[![Reddit](https://img.shields.io/badge/Reddit-Share-red?style=for-the-badge&logo=reddit)](https://reddit.com/submit?url=https://github.com/AlanSong2077/github-readme-crafter-Skill&title=GitHub%20README%20Crafter%20-%20AI-Powered%20Premium%20Documentation)
-[![Hacker News](https://img.shields.io/badge/Hacker%20News-Share-orange?style=for-the-badge&logo=ycombinator)](https://news.ycombinator.com/submitlink?u=https://github.com/AlanSong2077/github-readme-crafter-Skill)
-[![Twitter](https://img.shields.io/badge/Twitter-Share-blue?style=for-the-badge&logo=twitter)](https://twitter.com/share?url=https://github.com/AlanSong2077/github-readme-crafter-Skill&text=GitHub%20README%20Crafter%20-%20AI-Powered%20Premium%20Documentation)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Share-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/AlanSong2077/github-readme-crafter-Skill&title=GitHub%20README%20Crafter)
+## 🔗 Share the Love
+
+<a href="https://github.com/AlanSong2077/github-readme-crafter-Skill">
+  <img src="https://img.shields.io/badge/Share%20on-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub">
+</a>
+<a href="https://reddit.com/submit?url=https://github.com/AlanSong2077/github-readme-crafter-Skill&title=GitHub%20README%20Crafter%20-%20Spec-Driven%20AI%20Documentation">
+  <img src="https://img.shields.io/badge/Share%20on-Reddit-ff4500?style=for-the-badge&logo=reddit" alt="Reddit">
+</a>
+<a href="https://twitter.com/intent/tweet?url=https://github.com/AlanSong2077/github-readme-crafter-Skill&text=GitHub%20README%20Crafter%20-%20Spec-Driven%20AI%20Documentation%20Generator">
+  <img src="https://img.shields.io/badge/Share%20on-Twitter-1da1f2?style=for-the-badge&logo=twitter" alt="Twitter">
+</a>
+<a href="https://news.ycombinator.com/submitlink?u=https://github.com/AlanSong2077/github-readme-crafter-Skill">
+  <img src="https://img.shields.io/badge/Share%20on-Hacker%20News-ff6600?style=for-the-badge&logo=ycombinator" alt="Hacker News">
+</a>
+
+---
 
 ## 🤝 Contributing
 
-Contributions follow **Spec-Driven Development**:
+We follow **Spec-Driven Development**:
 
-1. Read `SPEC.md` before making changes
-2. Update `SPEC.md` if adding new requirements
-3. Update `test.md` with corresponding validation
+1. Read `SPEC.md` — source of truth
+2. Make changes
+3. Update `test.py` if needed
 4. Run `python3 test.py` to verify
+5. Submit PR
 
-## 📄 License
+---
+
+## 📜 License
 
 MIT License
 
 ---
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-Python-38bdf8?style=for-the-badge&logo=python&logoColor=white" alt="Made with Python">
+  <img src="https://img.shields.io/badge/Powered%20by-Spec%20Driven%20Development-38bdf8?style=for-the-badge&logo=spec" alt="Spec-Driven">
+</p>
 
-**Made with ❤️ by AlanSong2077**
-
+<p align="center">
+  <a href="https://github.com/AlanSong2077">@AlanSong2077</a> • 2026
 </p>
