@@ -113,11 +113,11 @@ class READMEValidator:
                 if "example" not in placeholder.lower():
                     self.warnings.append(f"B-03: Possible placeholder: {placeholder}")
         
-        # B-04: TL;DR section
+        # B-04: TL;DR section (REQUIRED)
         if "TL;DR" in content or "Quick Start" in content or "Quick start" in content:
             self.passed.append("B-04: TL;DR or Quick Start section present")
         else:
-            self.warnings.append("B-04: No TL;DR or Quick Start section")
+            self.errors.append("B-04: TL;DR section REQUIRED - all READMEs must have quick start")
         
         # B-05: Installation section
         if "## Installation" in content or "## 安装" in content:

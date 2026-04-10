@@ -8,153 +8,173 @@
 
 **Project Name**: GitHub README Crafter  
 **Type**: AI-Powered Documentation Generation Skill  
-**Core Function**: Generate production-ready GitHub README documents from project analysis  
-**Target Users**: Developers, AI agents, technical writers
+**Core Function**: Generate premium, attention-grabbing GitHub README documents  
+**Target Users**: Developers, AI agents, technical writers who want professional documentation
 
 ---
 
-## 2. Core Capabilities (Enforced)
+## 2. Core Principle
 
-### 2.1 Project Analysis
+**All READMEs MUST be visually premium and attention-grabbing.** There is no "minimal" or "simple" mode. Every generated README should make visitors think "this project is professional and well-maintained."
+
+---
+
+## 3. Required Capabilities
+
+### 3.1 Project Analysis
 - **Input**: Project directory path
 - **Output**: Structured metadata (language, framework, structure, entry points)
 - **Validation**: MUST return valid JSON with required fields
 
-### 2.2 Banner Generation
+### 3.2 Banner Generation
 - **Output**: SVG file with gradient background and geometric decorations
 - **Variants**: Dark mode (default), Light mode
 - **Dimensions**: 1280x320 pixels
 - **Validation**: Valid SVG XML, no broken elements
+- **Requirement**: MUST be visually impressive - gradient background, geometric decorations, professional typography
 
-### 2.3 Mermaid Diagrams
+### 3.3 Mermaid Diagrams
 - **Types**: Architecture, Tech Stack, Workflow, CI/CD Pipeline
 - **Validation**: Valid Mermaid syntax, renders on GitHub
+- **Requirement**: At least one diagram required for visual appeal
 
-### 2.4 Advanced Elements
-| Element | Format | Validation |
-|---------|--------|------------|
-| Star History | `![Star History](https://api.star-history.com/svg?repos=owner/repo&type=Date)` | URL format check |
-| Contributors | `<a href="..."><img src="https://contrib.rocks/..."/></a>` | URL format check |
-| Share Buttons | Markdown with `style=flat-square` | Valid shields.io URLs |
-| Sponsors | HTML table or badge row | Valid HTML/badge syntax |
+### 3.4 Advanced Elements
+| Element | Format | Required |
+|---------|--------|----------|
+| Star History | `![Star History](https://api.star-history.com/svg?repos=owner/repo&type=Date)` | Always |
+| Contributors | `<a href="..."><img src="https://contrib.rocks/..."/></a>` | Always |
+| Share Buttons | Markdown with `style=flat-square` | Always |
+| Badges | Shields.io, flat-square style | Always |
 
-### 2.5 Bilingual Support
+### 3.5 Bilingual Support
 - **Languages**: English (default), Chinese (zh-CN)
 - **Output Files**: `README.md`, `README.zh-CN.md`
-- **Validation**: Both files must exist when bilingual=true
+- **Validation**: Both files must exist, structurally identical
 
 ---
 
-## 3. Output Structure
+## 4. Output Structure
 
-### 3.1 File Layout
+### 4.1 File Layout
 ```
 project/
 ├── README.md                    # English version (REQUIRED)
-├── README.zh-CN.md             # Chinese version (if --bilingual)
-├── SPEC.md                     # This specification (if applicable)
+├── README.zh-CN.md             # Chinese version (REQUIRED)
 ├── assets/
 │   ├── banner.svg             # Dark banner (REQUIRED)
-│   ├── banner-light.svg       # Light banner (REQUIRED)
-│   └── (other assets)
+│   └── banner-light.svg       # Light banner (REQUIRED)
 └── [existing project files]
 ```
 
-### 3.2 Content Sections (by style)
+### 4.2 Required Sections (ALL READMEs)
 
-#### Minimal Style
-1. Title (H1)
-2. Badges (max 3)
-3. One-line description
-4. Installation command
-5. Usage example
-6. License
+Every generated README MUST include:
 
-#### Standard Style
-1. Banner (dark/light mode)
-2. Language switcher (if bilingual)
-3. Badges (max 5)
-4. TL;DR Quick Start
-5. Overview (1 paragraph)
-6. Features (3-5 bullets)
-7. Installation
-8. Usage examples
-9. Tech Stack diagram (Mermaid)
-10. Contributing
-11. License
-
-#### Professional Style
-All Standard sections PLUS:
-- Sponsors showcase
-- Architecture diagram
-- Star History chart
-- Contributors showcase
-- Development Channels
-- Share buttons
-- Security section (if applicable)
+1. **Banner** — Visual hero with gradient and decorations
+2. **Language Switcher** — English | 中文 (for bilingual)
+3. **Badges Row** — Max 5 badges, flat-square style
+4. **TL;DR Quick Start** — One-command install + immediate usage
+5. **Overview** — 1 paragraph explaining value proposition
+6. **Features** — 3-5 bullet points with emoji
+7. **Installation** — Copy-paste commands
+8. **Usage** — Working code examples
+9. **Tech Stack Diagram** — Mermaid flowchart
+10. **Architecture Diagram** — Mermaid (if complex project)
+11. **Star History** — Growth chart
+12. **Contributors** — Showcase
+13. **Share Buttons** — Social sharing
+14. **Contributing** — Guidelines
+15. **License** — MIT (default)
 
 ---
 
-## 4. Design Rules (Hard Constraints)
+## 5. Design Rules (Hard Constraints)
 
-### 4.1 Badge Rules
-| Rule | Constraint | Enforcement |
-|------|------------|-------------|
-| Max badges | 5 per row | HARD LIMIT |
-| Style | `flat-square` (default) or `for-the-badge` | REQUIRED |
-| Emoji in badges | PROHIBITED | REJECT |
-| Broken URLs | PROHIBITED | REJECT |
-
-### 4.2 Banner Rules
+### 5.1 Banner Rules
 | Rule | Constraint |
 |------|------------|
 | Format | SVG only |
-| Background | Gradient (2+ colors) |
-| Decorations | Geometric shapes allowed |
-| Text | Title + subtitle required |
-| Theme | Dark AND Light variants |
+| Dimensions | 1280x320 pixels |
+| Background | Gradient (2+ colors, visually appealing) |
+| Decorations | Geometric shapes REQUIRED |
+| Text | Title + subtitle |
+| Theme | Dark AND Light variants (both required) |
 
-### 4.3 Mermaid Diagram Rules
+### 5.2 Badge Rules
+| Rule | Constraint | Enforcement |
+|------|------------|-------------|
+| Max badges | 5 | HARD LIMIT |
+| Style | `flat-square` | REQUIRED |
+| Emoji in badges | PROHIBITED | REJECT |
+| Broken URLs | PROHIBITED | REJECT |
+
+### 5.3 Mermaid Diagram Rules
 | Rule | Constraint |
 |------|------------|
 | Syntax | GitHub-compatible Mermaid |
 | Max nodes | 15 per diagram |
+| Min diagrams | 1 (Tech Stack) |
 | Labels | Meaningful, no generic names |
 
-### 4.4 Content Rules
+### 5.4 Content Rules
 | Rule | Constraint |
 |------|------------|
 | Emoji usage | MAX 2 per section |
 | Paragraph length | MAX 4 sentences |
 | Code examples | Complete, runnable |
 | Language | Imperative mood for commands |
+| TL;DR | REQUIRED |
 
 ---
 
-## 5. Validation Checklist
+## 6. Style Tiers
+
+There are TWO style tiers only:
+
+### Standard (Minimum)
+All required sections listed in Section 4.
+
+### Professional (Enhanced)
+All Standard sections PLUS:
+- Sponsors showcase (if available)
+- Extended architecture diagram
+- Security section
+- Development channels explanation
+
+**Note**: Both tiers produce visually premium output. The difference is in depth, not quality.
+
+---
+
+## 7. Validation Checklist
 
 ### Pre-Generation
 - [ ] Project path exists and is readable
 - [ ] Output directory is writable
 - [ ] Required scripts are executable
 
-### Post-Generation
-- [ ] README.md exists and non-empty
-- [ ] All badge URLs are valid (HTTP 200)
-- [ ] All image URLs are valid
+### Post-Generation (ALL MANDATORY)
+- [ ] README.md exists, size > 2KB
+- [ ] README.zh-CN.md exists, size > 2KB
+- [ ] assets/banner.svg exists, valid SVG
+- [ ] assets/banner-light.svg exists, valid SVG
+- [ ] All badge URLs return HTTP 200
+- [ ] All image URLs are accessible
 - [ ] Mermaid syntax is valid
-- [ ] Bilingual files match in structure
-- [ ] No prohibited emoji in badges
-- [ ] TL;DR section present (standard+)
-- [ ] No placeholder text (e.g., "Your Name", "example.com")
+- [ ] TL;DR section present
+- [ ] No placeholder text
+- [ ] Language switchers in both files
+- [ ] Star History chart present
+- [ ] Contributors section present
+- [ ] Share buttons present
 
 ---
 
-## 6. Version History
+## 8. Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-04-11 | Initial spec |
+| 2.0 | 2026-04-11 | Remove minimal - all READMEs must be premium |
 
 ---
 

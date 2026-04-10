@@ -16,19 +16,20 @@
 
 ## Overview
 
-`github-readme-crafter` is a **Spec-Driven Development (SDD)** skill that generates production-ready GitHub README documents using AI.
+`github-readme-crafter` is a **Spec-Driven Development (SDD)** skill that generates **premium, attention-grabbing** GitHub README documents.
 
-The skill follows **Harness Engineering** principles: specifications drive generation, and all outputs are validated against hard constraints before delivery.
+**Every README is a first impression.** This skill produces documentation that makes visitors think "this project is professional and well-maintained."
 
 ## Features
 
-- 📋 **Spec-First Development** — All output conforms to `SPEC.md`
-- ✅ **Strong Validation** — Hard constraints enforced via `test.py`
-- 🎨 **Dynamic Banner Generation** — SVG banners with gradient backgrounds
-- 📊 **Mermaid Diagrams** — Architecture, tech stack, workflow diagrams
-- 🌐 **Bilingual Support** — English and Chinese versions
+- 🎨 **Premium Banners** — SVG banners with gradient backgrounds and geometric decorations
+- 📊 **Mermaid Diagrams** — Tech stack and architecture visualizations
+- 🌐 **Bilingual** — English and Chinese, structurally identical
 - 🌓 **Dark/Light Mode** — Theme-aware assets
-- ⚡ **TL;DR Sections** — Quick start for busy readers
+- ⚡ **TL;DR Quick Start** — One command to immediate productivity
+- 📈 **Star History** — Growth tracking visualization
+- 👥 **Contributors** — Showcase your community
+- 📢 **Share Buttons** — Reddit, Hacker News, Twitter, LinkedIn
 
 ## Quick Start
 
@@ -37,10 +38,10 @@ The skill follows **Harness Engineering** principles: specifications drive gener
 git clone https://github.com/AlanSong2077/github-readme-crafter-Skill.git
 cd github-readme-crafter-Skill
 
-# Generate README for your project
-python3 scripts/create_readme.py /path/to/project --style professional --bilingual
+# Generate premium README for your project
+python3 scripts/create_readme.py /path/to/project --style professional
 
-# Validate output (REQUIRED before delivery)
+# Validate output (REQUIRED)
 python3 test.py /path/to/project
 ```
 
@@ -52,29 +53,27 @@ python3 test.py /path/to/project
 ┌─────────────────────────────────────────────────────────────┐
 │ 1. Read SPEC.md                                             │
 │    - Source of truth for all generation                      │
-│    - Hard constraints, section requirements                  │
+│    - Premium-only: no minimal mode                          │
 ├─────────────────────────────────────────────────────────────┤
 │ 2. Analyze Project                                          │
 │    python3 scripts/analyze_project.py <path>                │
-│    → Returns: language, framework, structure metadata        │
 ├─────────────────────────────────────────────────────────────┤
 │ 3. Generate Assets                                          │
-│    - Banner (dark + light variants)                         │
-│    - Mermaid diagrams (if applicable)                       │
-│    - Advanced elements (badges, charts)                     │
+│    - Dark + Light banners (both required)                   │
+│    - Tech stack diagram                                     │
+│    - Architecture diagram                                   │
 ├─────────────────────────────────────────────────────────────┤
 │ 4. Compose README                                           │
-│    - Select template per style (minimal/standard/pro)       │
-│    - Insert generated assets                                │
-│    - Insert metadata from analysis                          │
+│    - Banner + badges + TL;DR + all required sections       │
+│    - Bilingual (English + Chinese)                          │
 ├─────────────────────────────────────────────────────────────┤
-│ 5. Validate (HARD REQUIREMENT)                              │
+│ 5. Validate (MANDATORY)                                     │
 │    python3 test.py <project_path>                           │
-│    → MUST PASS all Category A-E tests before delivery       │
+│    → 0 errors required for delivery                        │
 ├─────────────────────────────────────────────────────────────┤
 │ 6. Deliver                                                  │
-│    - Write files to project directory                        │
-│    - Present validation status                              │
+│    - Write files                                           │
+│    - Present validation status                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -86,9 +85,10 @@ github-readme-crafter-Skill/
 ├── SPEC.md                           # Specification (source of truth)
 ├── Agent.md                          # Agent operating instructions
 ├── test.md                           # Validation test definitions
+├── test.py                           # Executable validation script
 ├── scripts/
-│   ├── create_readme.py             # Main generator
-│   ├── analyze_project.py             # Project analyzer
+│   ├── create_readme.py            # Main generator
+│   ├── analyze_project.py            # Project analyzer
 │   ├── generate_banner.py            # SVG banner generator
 │   ├── generate_mermaid.py           # Mermaid diagram generator
 │   └── generate_advanced_elements.py  # Badges, charts, etc.
@@ -98,13 +98,35 @@ github-readme-crafter-Skill/
     └── mermaid_examples.md           # Diagram examples
 ```
 
-## Style Options
+## Required Sections
 
-| Style | Use Case | Sections |
-|-------|----------|----------|
-| `minimal` | Small libraries | Title, badges, install, usage, license |
-| `standard` | Medium projects | Banner, TL;DR, features, diagrams, install, usage |
-| `professional` | Large frameworks | All sections + star history, contributors, sponsors |
+Every generated README includes:
+
+| Section | Description |
+|---------|-------------|
+| Banner | Gradient SVG with geometric decorations |
+| Language Switcher | English \| 中文 |
+| Badges | Max 5, flat-square style |
+| TL;DR | One-command quick start |
+| Overview | Value proposition |
+| Features | 3-5 bullets with emoji |
+| Installation | Copy-paste commands |
+| Usage | Working code examples |
+| Tech Stack | Mermaid diagram |
+| Star History | Growth chart |
+| Contributors | Showcase |
+| Share Buttons | Social sharing |
+| Contributing | Guidelines |
+| License | MIT |
+
+## Style Tiers
+
+| Style | Description |
+|-------|-------------|
+| `standard` | All required sections + tech stack diagram |
+| `professional` | Standard + sponsors, extended architecture, development channels |
+
+**Both tiers produce premium output.** The difference is depth, not quality.
 
 ## Validation
 
@@ -117,39 +139,39 @@ python3 test.py /path/to/project
 ### Test Categories
 
 | Category | Description | Failure Action |
-|----------|-------------|----------------|
+|----------|-------------|---------------|
 | A - Structural | File existence, dimensions | HARD FAIL |
-| B - Content | Sections present, no placeholders | HARD FAIL |
+| B - Content | TL;DR, sections, no placeholders | HARD FAIL |
 | C - Badges | Count, style, URLs | HARD FAIL |
 | D - Images | URL accessibility | WARN |
 | E - Mermaid | Syntax validity | HARD FAIL |
 | F - Bilingual | File exists, parity | HARD FAIL |
-| G - Style | Emoji count, paragraph length | WARN |
 
 ### Pass Criteria
 
-| Level | Errors | Warnings |
-|-------|--------|----------|
-| **PASS** | 0 | Any |
-| **FAIL** | ≥ 1 | - |
+| Level | Errors | Result |
+|-------|--------|--------|
+| **PASS** | 0 | Ready for delivery |
+| **FAIL** | ≥ 1 | Fix before delivery |
 
-## Design Rules (Hard Constraints)
+## Design Rules
 
 ### Badge Rules
 - Maximum 5 badges per row
-- Style: `flat-square` (default) or `for-the-badge`
+- Style: `flat-square`
 - No emoji in badge text
 - shields.io URLs only
 
 ### Banner Rules
 - SVG format, 1280x320 pixels
 - Gradient background (2+ colors)
-- Dark AND light variants required for bilingual
+- Geometric decorations required
+- Dark AND light variants (both required)
 
 ### Mermaid Rules
 - GitHub-compatible syntax only
 - Maximum 15 nodes per diagram
-- No unsupported features (pie, timeline, gantt)
+- At least 1 diagram required
 
 ## Contributing
 

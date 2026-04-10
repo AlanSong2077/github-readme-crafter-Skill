@@ -1,37 +1,38 @@
 ---
 name: github-readme-crafter
-description: Generate professional GitHub README documents using Spec-Driven Development. Outputs are validated against hard constraints before delivery. Use when users need to create README files, architecture diagrams, or bilingual documentation.
+description: Generate premium, attention-grabbing GitHub README documents using Spec-Driven Development. Every README is visually impressive. No minimal mode. Use when users need professional README files with bilingual support.
 ---
 
 # GitHub README Crafter
 
-> **Spec-Driven Development Skill** — Outputs are generated and validated per SPEC.md. Run validation with test.py before delivery.
+> **Premium README Generation** — Every README is visually impressive. No "minimal" or "simple" mode. All outputs include banner, TL;DR, diagrams, badges, and advanced elements.
 
-## Core Principles
+## Core Principle
 
-1. **SPEC-First**: Read `SPEC.md` before any generation
-2. **Harness Engineering**: All output passes validation tests
-3. **No Deviation**: Without spec update, no output may differ from spec
+**Every README is a first impression.** This skill generates premium documentation that makes visitors think "this project is professional and well-maintained."
 
 ## Quick Reference
 
 | Item | Value |
 |------|-------|
-| Style Options | `minimal`, `standard`, `professional` |
-| Default Style | `standard` |
-| Bilingual | `--bilingual` flag |
+| Style Options | `standard`, `professional` |
+| Default Style | `standard` (premium minimum) |
+| Bilingual | Always (default) |
 | Validation | `test.py` script |
+
+**There is NO minimal style. All READMEs include banner, TL;DR, diagrams, and advanced elements.**
 
 ## Workflow
 
 ```
 1. Read SPEC.md (required)
 2. Analyze project: python3 scripts/analyze_project.py <path>
-3. Generate assets: banner, diagrams
-4. Compose README per template
-5. Run validation: python3 test.py <project_path>
-6. Fix any HARD FAIL errors
-7. Deliver output
+3. Generate assets: banner (dark + light), diagrams
+4. Compose README with ALL required sections
+5. Create bilingual version (mirrored structure)
+6. Run validation: python3 test.py <project_path>
+7. Fix any HARD FAIL errors
+8. Deliver output
 ```
 
 ## Commands
@@ -41,9 +42,8 @@ description: Generate professional GitHub README documents using Spec-Driven Dev
 python3 scripts/create_readme.py <project_path> [options]
 
 Options:
-  --style {minimal|standard|professional}  # Default: standard
-  --bilingual                              # Generate zh-CN version
-  --banner-theme {dark|both}              # Default: dark
+  --style {standard|professional}  # Default: standard
+  --bilingual                      # Default: true
 ```
 
 ### Validate Output
@@ -55,7 +55,7 @@ python3 test.py <project_path>
 
 ### Generate Individual Assets
 ```bash
-# Banner
+# Banner (dark + light required)
 python3 scripts/generate_banner.py "Title" --subtitle "Subtitle" --output assets/banner.svg
 
 # Mermaid Diagram
@@ -65,6 +65,86 @@ python3 scripts/generate_mermaid.py architecture --project <path> --output diagr
 python3 scripts/generate_advanced_elements.py {social|star-history|contributors|sponsors|share}
 ```
 
+## Output Structure
+
+```
+project/
+├── README.md              # English (required)
+├── README.zh-CN.md       # Chinese (required)
+└── assets/
+    ├── banner.svg        # Dark banner (required)
+    └── banner-light.svg  # Light banner (required)
+```
+
+## Required Sections
+
+Every README MUST include:
+
+| Section | Description |
+|---------|-------------|
+| Banner | SVG with gradient + geometric decorations |
+| Language Switcher | English \| 中文 |
+| Badges | Max 5, flat-square style |
+| TL;DR | One-command quick start |
+| Overview | 1 paragraph value proposition |
+| Features | 3-5 bullets |
+| Installation | Copy-paste commands |
+| Usage | Working code examples |
+| Tech Stack | Mermaid diagram |
+| Star History | Growth chart |
+| Contributors | Showcase |
+| Share Buttons | Social sharing |
+| Contributing | Guidelines |
+| License | MIT default |
+
+## Style Tiers
+
+| Tier | Description |
+|------|-------------|
+| `standard` | All required sections + tech stack diagram |
+| `professional` | Standard + sponsors, extended architecture, development channels |
+
+Both tiers produce visually premium output. The difference is depth, not quality.
+
+## Validation Checklist
+
+Before delivery:
+
+- [ ] README.md exists, size > 2KB
+- [ ] README.zh-CN.md exists, size > 2KB
+- [ ] assets/banner.svg exists, valid SVG
+- [ ] assets/banner-light.svg exists, valid SVG
+- [ ] All badge URLs valid
+- [ ] No emoji in badges
+- [ ] Mermaid syntax valid
+- [ ] TL;DR section present
+- [ ] No placeholder text
+- [ ] Language switchers in both files
+- [ ] Star History present
+- [ ] Contributors present
+- [ ] Share buttons present
+
+Run: `python3 test.py <project_path>`
+
+## Design Rules
+
+### Badge Rules
+- Max 5 badges per row
+- Use `flat-square` style
+- No emoji in badge text
+- shields.io URLs only
+
+### Banner Rules
+- SVG format, 1280x320px
+- Gradient background (2+ colors)
+- Geometric decorations required
+- Dark AND light variants (both required)
+
+### Mermaid Rules
+- GitHub-compatible syntax only
+- Max 15 nodes per diagram
+- At least 1 diagram required
+
 ## Files
 
 | File | Purpose |
@@ -72,71 +152,12 @@ python3 scripts/generate_advanced_elements.py {social|star-history|contributors|
 | `SPEC.md` | Source of truth, hard constraints |
 | `Agent.md` | Agent operating instructions |
 | `test.md` | Validation test definitions |
+| `test.py` | Executable validation script |
 | `scripts/create_readme.py` | Main generator |
-| `scripts/analyze_project.py` | Project metadata extraction |
+| `scripts/analyze_project.py` | Project metadata |
 | `scripts/generate_banner.py` | SVG banner generation |
 | `scripts/generate_mermaid.py` | Mermaid diagram generation |
 | `scripts/generate_advanced_elements.py` | Badges, charts, etc. |
-
-## Output Structure
-
-```
-project/
-├── README.md           # English (required)
-├── README.zh-CN.md    # Chinese (if --bilingual)
-└── assets/
-    ├── banner.svg      # Dark banner (required)
-    └── banner-light.svg # Light banner (if bilingual)
-```
-
-## Style Sections
-
-| Section | minimal | standard | professional |
-|---------|---------|----------|--------------|
-| Banner | - | ✓ | ✓ |
-| TL;DR | - | ✓ | ✓ |
-| Features | - | ✓ | ✓ |
-| Installation | ✓ | ✓ | ✓ |
-| Usage | ✓ | ✓ | ✓ |
-| Tech Stack Diagram | - | ✓ | ✓ |
-| Architecture Diagram | - | - | ✓ |
-| Star History | - | - | ✓ |
-| Contributors | - | - | ✓ |
-| Sponsors | - | - | ✓ |
-| Share Buttons | - | - | ✓ |
-| License | ✓ | ✓ | ✓ |
-
-## Validation Checklist
-
-Before delivery, verify:
-
-- [ ] README.md exists, size > 1KB
-- [ ] All badge URLs valid (shields.io format)
-- [ ] No emoji in badges
-- [ ] Mermaid syntax valid
-- [ ] No placeholder text
-- [ ] TL;DR present (standard+)
-- [ ] Bilingual files structurally match (if applicable)
-
-Run: `python3 test.py <project_path>`
-
-## Design Patterns
-
-### Badge Rules
-- Max 5 badges per row
-- Use `flat-square` style (default)
-- No emoji in badge text
-- shields.io URLs only
-
-### Banner Rules
-- SVG format, 1280x320px
-- Gradient background
-- Dark AND light variants for bilingual
-
-### Mermaid Rules
-- GitHub-compatible syntax only
-- Max 15 nodes per diagram
-- Use subgraphs meaningfully
 
 ## Resources
 
