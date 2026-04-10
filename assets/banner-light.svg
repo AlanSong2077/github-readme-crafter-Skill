@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="320" viewBox="0 0 1280 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c7d2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1280" height="320" fill="url(#grad)"/>
+  
+  <!-- 装饰几何图形 -->
+  <circle cx="1100" cy="80" r="120" fill="#ec4899" opacity="0.1"/>
+  <circle cx="100" cy="240" r="80" fill="#ec4899" opacity="0.08"/>
+  <rect x="850" y="200" width="60" height="60" fill="#ec4899" opacity="0.15" transform="rotate(45 880 230)"/>
+  
+  <!-- 标题 -->
+  <text x="640" y="150" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">
+    GitHub README Crafter
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="640" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" fill="#cccccc" text-anchor="middle">AI-Powered Premium Documentation Generator</text>
+  
+  <!-- 底部装饰线 -->
+  <rect x="580" y="280" width="120" height="3" fill="#ec4899"/>
+</svg>
